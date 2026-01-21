@@ -4,6 +4,7 @@ import numpy as np
 robot = stretch_body.robot.Robot()
 robot.startup()
 
+# Stow the robot
 robot.stow()
 robot.push_command()
 robot.wait_command()
