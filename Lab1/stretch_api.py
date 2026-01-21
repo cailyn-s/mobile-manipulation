@@ -16,15 +16,15 @@ robot.push_command()
 robot.wait_command()
 
 # Rotate wrist in each direction, one at a time
-robot.end_of_arm.move_to('wrist_yaw', np.radians(30))
+robot.end_of_arm.move_by('wrist_yaw', np.radians(30))
 robot.push_command()
 robot.wait_command()
 
-robot.end_of_arm.move_to('wrist_pitch', np.radians(30))
+robot.end_of_arm.move_by('wrist_pitch', np.radians(30))
 robot.push_command()
 robot.wait_command()
 
-robot.end_of_arm.move_to('wrist_roll', np.radians(30))
+robot.end_of_arm.move_by('wrist_roll', np.radians(30))
 robot.push_command()
 robot.wait_command()
 
