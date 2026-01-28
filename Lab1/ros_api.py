@@ -18,15 +18,21 @@ node.move_to_pose({'joint_wrist_pitch': np.radians(45)}, blocking=True)
 node.move_to_pose({'joint_wrist_roll': np.radians(45)}, blocking=True)
 
 # Open the gripper and close it
+node.move_to_pose({'joint_gripper_finger_left': np.radians(45)})
+node.move_to_pose({'joint_gripper_finger_right': np.radians(45)}, blocking=True)
 
 # Rotate the head
+node.move_to_pose({'joint_head_pan': np.radians(45)}, blocking=True)
+node.move_to_pose({'joint_head_tilt': np.radians(45)}, blocking=True)
 
 # Move back to stow
+node.stow_the_robot()
 
 # Move forward 0.5 meters
+node.move_to_pose({'translate_mobile_base': 0.5}, blocking=True)
 
 # Rotate 180 degrees
+node.move_to_pose({'rotate_mobile_base': np.radians(180)}, blocking=True)
 
 # Move forward 0.5 meters again
-
-
+node.move_to_pose({'translate_mobile_base': 0.5}, blocking=True)
