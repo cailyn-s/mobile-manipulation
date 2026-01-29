@@ -7,6 +7,6 @@ stretch_calibration`/rviz/stretch_simple_test.rviz`
 
 `ros2 launch stretch_core d435i_low_resolution.launch.py`
 
-`ros2 topic /stretch/joint_states`
+`ros2 topic info /stretch/joint_states`
 
 `ros2 topic echo /joint_limits`
